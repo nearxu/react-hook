@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // 不要阻塞渲染的数据流
 
@@ -29,20 +29,23 @@ export const SearchResult = ({ query }) => {
 
   // 被缓存的返回值
   const getData = React.useCallback(() => {
-    return () => setData({ currentPage, query });
+    setData(currentPage);
   }, [currentPage, query]);
 
   const getUrl = () => {
     return `page=${currentPage}&query=${query}`
   }
-  // componentDidmount
-  React.useEffect(() => {
+  // componentDidmount componentdidupate
+  useEffect(() => {
     const url = getUrl();
-    return () => getData(url);
-  }, [getUrl, getData]);
+    console.log(url, 'url')
+    getData(url);
+  }, [currentPage]);
+
   console.log(data, 'data')
   return (
     <div>
+      <p>page change ,getdata params change,get data</p>
       <p>hello flexComponent {data}</p>
       <button onClick={() => setPage(currentPage + 1)}>next page</button>
     </div>

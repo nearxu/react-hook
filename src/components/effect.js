@@ -40,6 +40,7 @@ export const Apps = () => {
   const windowSize = useWindowSize();
   return (
     <div>
+      <p>useEffect [] componentDidMount</p>
       <p>weather isMount: {isMount ? "true" : "false"}</p>
       <div>页面高度 {windowSize.innerHeight}</div>
     </div>
