@@ -6,7 +6,7 @@ import { SearchResult } from './components/flexComponent';
 // import { Form } from './components/form';
 import { Page, Pagefn, MessageHook, MessageRef, Parent, GetPrePorps, Count } from './examples/fnVsClass';
 import { Form } from './howUse';
-
+import { AppContext } from './context/useContext'
 class App extends Component {
   state = {
     user: "tom"
@@ -36,6 +36,7 @@ class App extends Component {
         <GetPrePorps />
         <Count /> <br />
         <Form />
+        <AppContext />
       </div>
     );
   }
