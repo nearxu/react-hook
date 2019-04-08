@@ -16,3 +16,7 @@ DOM 副作用修改 / 监听。
 ### hook 
 
 组件中的每次 render 都有其特定且独立的 props 和 state ( 可以把每一次 render 看作是函数组件的再次调用 )，如果组件中含有定时器、事件处理器、其他的 API 甚至 useEffect ，由于闭包的特性，在它们内部的代码都会立即捕获当前 render 的 props 和 state ，而不是最新的 props 和 state
+
+### alert 组件 createPortal
+
+### model 组件
