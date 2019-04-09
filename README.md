@@ -20,3 +20,15 @@ DOM 副作用修改 / 监听。
 ### alert 组件 createPortal
 
 ### model 组件
+
+  modal form get value
+
+  const formdata = new FormData();
+  formdata.append("name","tom");
+  formdata.append("password","123456")
+
+  // other
+  const form = e.target;
+  const formdata = new FormData(form)
+
+  const name = formData.get('name')

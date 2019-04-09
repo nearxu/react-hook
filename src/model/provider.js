@@ -1,5 +1,5 @@
 import React from 'react';
-import { Context } from './context'
+import { Context } from './context';
 import './index.scss';
 
 export default class Providers extends React.Component {
@@ -7,21 +7,28 @@ export default class Providers extends React.Component {
     this.setState({ content, props })
   }
   hideModel = () => this.setState({ content: null, props: {} })
+  submit = (e) => {
+    e.preventDefault(e);
+    const form = e.target;
+    const formData = new FormData(form);
+
+    console.log(formData.get('username'))
+    console.log(formData.get('password'))
+  }
   state = {
     content: null,
     props: {},
     showModel: this.showModel,
-    hideModel: this.hideModel
+    hideModel: this.hideModel,
+    submit: this.submit
   }
   render() {
     const ModelContent = this.state.content;
-    console.log(ModelContent, 'modelCOntent');
-    console.log(this.state, 'state')
     return (
       <Context.Provider value={this.state}>
         {this.props.children}
         {ModelContent &&
-          <Model content={ModelContent} />
+          (<Model content={ModelContent} />)
         }
       </Context.Provider>
     )
@@ -31,8 +38,8 @@ export default class Providers extends React.Component {
 const Model = props => {
   const Content = props.content;
   return (
-    <div className="model">
-      <div className="model-content">
+    <div className="modal">
+      <div className="modal-content">
         <Content />
       </div>
     </div>
