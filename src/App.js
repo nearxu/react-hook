@@ -1,20 +1,29 @@
+/*
+ * @Author: your name
+ * @Date: 2019-10-28 11:41:48
+ * @LastEditTime: 2019-10-28 11:52:07
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \react-hook\src\App.js
+ */
 import React, { Component } from 'react';
-import { Apps } from './components/effect';
-import { CallBack } from './components/useCallback';
-import { Capt, UnCapt } from './components/useState';
-import { SearchResult } from './components/flexComponent';
-// import { Form } from './components/form';
-import { Page, Pagefn, MessageHook, MessageRef, Parent, GetPrePorps, Count } from './examples/fnVsClass';
-import { Form } from './howUse';
-import { AppContext } from './context/useContext'
+// import { Apps } from './components/effect';
+// import { CallBack } from './components/useCallback';
+// import { Capt, UnCapt } from './components/useState';
+// import { SearchResult } from './components/flexComponent';
+// // import { Form } from './components/form';
+// import { Page, Pagefn, MessageHook, MessageRef, Parent, GetPrePorps, Count } from './examples/fnVsClass';
+// import { Form } from './howUse';
+// import { AppContext } from './context/useContext'
+import Example from './memore/index'
 class App extends Component {
   state = {
     user: "tom"
   }
-  render() {
+  render () {
     return (
       <div className="App">
-        <Apps />
+        {/* <Apps />
         <CallBack />
         <Capt />
         <UnCapt />
@@ -36,7 +45,8 @@ class App extends Component {
         <GetPrePorps />
         <Count /> <br />
         <Form />
-        <AppContext />
+        <AppContext /> */}
+        <Example />
       </div>
     );
   }
