@@ -15,7 +15,7 @@ import React, { Component } from 'react';
 // import { Page, Pagefn, MessageHook, MessageRef, Parent, GetPrePorps, Count } from './examples/fnVsClass';
 // import { Form } from './howUse';
 // import { AppContext } from './context/useContext'
-import Example from './memore/index'
+import BaseComponent from './basic'
 class App extends Component {
   state = {
     user: "tom"
@@ -46,7 +46,7 @@ class App extends Component {
         <Count /> <br />
         <Form />
         <AppContext /> */}
-        <Example />
+        <BaseComponent />
       </div>
     );
   }
